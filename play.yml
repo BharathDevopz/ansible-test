@@ -1,0 +1,25 @@
+---
+- name: Test Ansible Playbook
+  hosts: localhost
+  gather_facts: yes
+
+  tasks:
+    - name: Check uptime
+      command: uptime
+      register: uptime_result
+
+    - name: Display uptime result
+      debug:
+        var: uptime_result.stdout
+
+    - name: Ensure "curl" is installed
+      apt:
+        name: curl
+        state: present
+      when: ansible_os_family == "Debian"
+
+    - name: Create a test file
+      file:
+        path: /tmp/harness_test.txt
+        state: touch
+
