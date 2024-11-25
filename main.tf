@@ -1,7 +1,3 @@
-variable "region" {}
-variable "project_id" {}
-variable "credentials" {}
-
 provider "google" {
   credentials = var.credentials
   project     = var.project_id
