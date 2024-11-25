@@ -1,5 +1,9 @@
+variable "region" {}
+variable "project_id" {}
+variable "credentials" {}
+
 provider "google" {
-  credentials = var.gcp_credentials_file
+  credentials = var.credentials
   project     = var.project_id
   region      = var.region
 }
