@@ -1,7 +1,0 @@
-all:
-  hosts:
-    target_host:
-      ansible_host: 192.168.0.112
-      ansible_user: harness
-      ansible_ssh_pass: Bharath@Harness1
-      ansible_connection: ssh
