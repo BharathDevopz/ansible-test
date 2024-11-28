@@ -1,6 +1,6 @@
 vm_name              = "my-harness-vm"
-disk_image           = "debian-cloud/debian-11"
+disk_image           = "debian-12-bookworm-v20241112"
 zone                 = "us-central1-a"
-machine_type         = "n1-standard-1"
+machine_type         = "n2-standard-4"
 network              = "default"
 
